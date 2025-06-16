@@ -1,37 +1,327 @@
-.container{
-     opacity: 0;
-     animation: fadeIn 1s ease-in-out 1s forwards; }
- @keyframes fadeIn{
-    to{opacity: 1;}};
-img{
-    height: 200px;
-    width: 200px;
+/* Profile Card Styling */
+.profile-card {
+  width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
-.main-container{
-    margin: 8px 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #C4DDDE;
+
+.profile-card-img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
 }
-.img-container img{
-    border-radius: 50%;
-    object-fit: cover;
-    background-position: center;
-    margin: 10px 0px;
+
+.profile-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
-.text-container{
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+
+.profile-card:hover .profile-card-img {
+  transform: scale(1.03);
 }
-.text-container h4{
-    font-weight: bold;
-    font-size:xx-large;
+
+/* Text content adjustments */
+.text-content h1,
+.text-content h4 {
+  margin-bottom: 0.5rem;
 }
-.bottom-text{
-    margin: 10px 0px;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-}  
+
+.changing-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #007bff;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Responsive adjustments for social cards */
+@media (max-width: 576px) {
+  .social-card {
+    width: 100px;
+    padding: 0.75rem;
+  }
+  .social-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Progress bars */
+.progress-bar {
+  transition: width 0.4s ease-in-out;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 768px) {
+  .animate-text h4 {
+    font-size: 1.5rem;
+  }
+
+  .card-body .btn {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Social Icon Hover Card Effect */
+.social-icon {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 0.75rem;
+  text-align: center;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+  background-color: #e9f5ff;
+  color: #007bff;
+}
+
+.social-icon:hover i,
+.social-icon:hover small {
+  color: #007bff;
+}
+
+.social-icon img {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Second section */
+
+
+/* About card animation */
+.animate-about {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Large profile image */
+.profile-img-lg {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Tech circle images */
+.tech-img-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-img-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* About card container styling */
+.about-card {
+  background: white;
+  border-radius: 16px;
+}
+/* Card hover effect */
+.card-hover-expand {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-expand:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Section */
+.small-project-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #111; /* dark background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.small-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  border: 2px solid #0d6efd; /* Bootstrap primary or highlight color */
+}
+
+.card-img-top-wrapper {
+  height: 150px;
+  overflow: hidden;
+}
+
+.card-img-top-small {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.small-project-card:hover .card-img-top-small {
+  transform: scale(1.05);
+}
+
+.small-project-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.small-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top-wrapper {
+  height: 150px;
+  overflow: hidden;
+}
+
+.card-img-top-small {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.small-project-card:hover .card-img-top-small {
+  transform: scale(1.05);
+}
+
+/* Skill Section */
+.skill-card {
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background-color: #f8f9fa;
+}
+
+.icon i {
+  transition: color 0.3s ease-in-out;
+}
+
+.skill-card:hover .icon i {
+  color: #0d6efd; /* Bootstrap primary color */
+}
+
+
+/* Contact Image Hover Card */
+.contact-image-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.contact-image-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Contact Image */
+.hover-zoom img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-zoom img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+/* Form Styling */
+#contact form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Submit Button Hover */
+#contact button[type="submit"]:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Image Card Container */
+.contact-img-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Outer Hover Effect */
+.contact-img-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Inner Hover Overlay */
+.contact-img-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(193, 204, 215, 0.2), rgba(0, 123, 255, 0.4));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+/* Activate inner hover on hover */
+.contact-img-card:hover::after {
+  opacity: 1;
+}
+
+/* Image Styling */
+.contact-img-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 0;
+}
+
+.contact-img-card:hover img {
+  transform: scale(1.02);
+}

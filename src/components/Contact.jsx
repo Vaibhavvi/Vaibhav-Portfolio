@@ -24,57 +24,68 @@ function Contact() {
   };
 
   return (
-    <div className="main-container">
-    <div className="container mt-5">
-      <h2>Get in touch</h2>
-      <div className="row">
-        <div className="col-md-6">
-          <form onSubmit={handleSubmit} style={{padding:'10px'}}>
-            <div className="mb-3">
-              <label htmlFor="name" className="form-label">Name</label>
-              <input
-                type="text"
-                className="form-control"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">Email address</label>
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <label htmlFor="message" className="form-label">Message</label>
-              <textarea
-                className="form-control"
-                id="message"
-                name="message"
-                rows="3"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
-          </form>
-        </div>
-        <div className="col-md-6">
-          <img src={Contactimage} alt="Contact Us" className="img-fluid" />
-        </div>
-      </div>
-    </div>
-    </div>
+   <>
+   <section id="contact" className="section py-5 bg-light">
+           <div className="container">
+             <h2 className="text-center mb-4">Get in Touch</h2>
+             <div className="row">
+               {/* Image Section - Now on the Left */}
+               <div className="col-md-6 d-flex align-items-center justify-content-center mb-4">
+                 <div className="contact-img-card hover-zoom">
+                   <img
+                     src={Contactimage}
+                     alt="Contact"
+                     className="img-fluid rounded shadow-sm"
+                   />
+                 </div>
+               </div>
+   
+               {/* Form Section - Now on the Right */}
+               <div className="col-md-6">
+                 <form onSubmit={handleSubmit}>
+                   <div className="mb-3">
+                     <label htmlFor="name" className="form-label">Name</label>
+                     <input
+                       type="text"
+                       id="name"
+                       className="form-control"
+                       name="name"
+                       value={formData.name}
+                       onChange={handleChange}
+                       required
+                     />
+                   </div>
+                   <div className="mb-3">
+                     <label htmlFor="email" className="form-label">Email</label>
+                     <input
+                       type="email"
+                       id="email"
+                       className="form-control"
+                       name="email"
+                       value={formData.email}
+                       onChange={handleChange}
+                       required
+                     />
+                   </div>
+                   <div className="mb-3">
+                     <label htmlFor="message" className="form-label">Message</label>
+                     <textarea
+                       id="message"
+                       className="form-control"
+                       rows="3"
+                       name="message"
+                       value={formData.message}
+                       onChange={handleChange}
+                       required
+                     />
+                   </div>
+                   <button type="submit" className="btn btn-primary">Submit</button>
+                 </form>
+               </div>
+             </div>
+           </div>
+         </section>
+   </>
   );
 }
 

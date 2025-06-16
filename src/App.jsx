@@ -7,6 +7,8 @@ import Skill from './components/Skill';
 import Project from './components/Project';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Footer from './components/Footer';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const router = createBrowserRouter(
   [

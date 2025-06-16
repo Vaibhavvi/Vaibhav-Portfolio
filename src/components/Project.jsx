@@ -1,60 +1,62 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import Project1 from '../assets/Project1.png'
-import Project2 from '../assets/Project2.png'
-import Project3 from '../assets/Project3.png'
-import Project5 from '../assets/Project5.png'
+import WordChange from '../assets/WordChange.png'
+import iTask from '../assets/iTask.png'
+import Kids from '../assets/Kids.png'
+import CodePaste from '../assets/CodePaste.png'
 
 const Project = () => {
-  return (
-   <div className="main-container ">
-    <h1>Latest Project</h1>
 
-    <div className="card-container">
-    <div className="row row-cols-1 row-cols-md-2 g-4">
-  <div className="col">
-    <div className="card">
-      <img src={Project1} className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Word Change</h5>
-        <p className="card-text">This project using Bootstrap and React . Using WordChange you change your text which way you want.</p>
-        <NavLink to=''><button type="button" class="btn btn-outline-primary">See more</button></NavLink>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src={Project2} className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">NewApp</h5>
-        <p className="card-text">This project using Bootstrap and React . Using NewsApp you grab daily free news.</p>
-        <NavLink to=''><button type="button" class="btn btn-outline-primary">See more</button></NavLink>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src={Project3} className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This project using HTML CSS and JavaScript. And my total html css and little bit js knowladge shared.</p>
-        <NavLink to=''><button type="button" class="btn btn-outline-primary">See more</button></NavLink>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src={Project5} className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <NavLink to=''><button type="button" class="btn btn-outline-primary">See more</button></NavLink>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-   </div>
+   const projectData = [
+    { image: CodePaste, title: "CodePaste", desc: "You can use this for store your code.", github: "https://github.com/Vaibhavvi/PasteCode", live: "https://vaibhavvi.github.io/PasteCode/" },
+    { image: iTask, title: "iTask", desc: "Task management app.", github: "https://github.com/Vaibhavvi/iTask", live: "https://vaibhavvi.github.io/iTask/" },
+    { image: Kids, title: "Kids App", desc: "Educational app for kids.", github: "https://github.com/Vaibhavvi/KIDS-LERNER", live: "https://vaibhavvi.github.io/KIDS-LERNER/" },
+    { image: WordChange, title: "WordChange", desc: "Text manipulation tool.", github: "https://github.com/Vaibhavvi/WordChange", live: "https://vaibhavvi.github.io/WordChange/" }
+     ];
+
+
+  return (
+   <>
+   <section id="small-projects" className="py-5 bg-white">
+        <div className="container">
+          <h3 className="text-center fw-bold mb-4">Projects</h3>
+          <div className="row justify-content-center g-4">
+            {projectData.map((project, i) => (
+              <div className="col-sm-6 col-md-4 col-lg-3" key={i}>
+                <div className="small-project-card shadow-sm">
+                  <div className="card-img-top-wrapper">
+                    <img
+                      src={project.image}
+                      alt={`Project ${i + 1}`}
+                      className="card-img-top-small"
+                    />
+                  </div>
+                  <div className="p-3 text-center">
+                    <h6 className="fw-semibold mb-2">{project.title}</h6>
+                    <div className="d-flex justify-content-center gap-2">
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-sm btn-primary"
+                      >
+                        Live
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-sm btn-outline-dark"
+                      >
+                        GitHub
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+   </>
   )
 }
 
