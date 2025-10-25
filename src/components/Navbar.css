@@ -1,37 +1,80 @@
+/* Navbar.css */
+
+/* General Navbar Styles */
+.navbar {
+  background-color: #000; /* Black background */
+  padding: 0.8rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+/* Brand / Logo Animation */
 .animated-logo {
-    animation: logoBounce 2s infinite;
+  color: #00bfff; /* Accent color */
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.animated-logo:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Navbar Toggler Styles */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Navbar Links */
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  color: #ffffff;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+/* Link hover animation */
+.animated-link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #00bfff;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.animated-link:hover {
+  color: #00bfff;
+}
+
+.animated-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+    padding-top: 1rem;
   }
-  
-  @keyframes logoBounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
+  .nav-item {
+    margin: 0.5rem 0;
   }
-  
-  .animated-link {
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .animated-link::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    bottom: 0;
-    left: -100%;
-    transition: left 0.3s;
-  }
-  
-  .animated-link:hover::before {
-    left: 0;
-  }
-  
+}

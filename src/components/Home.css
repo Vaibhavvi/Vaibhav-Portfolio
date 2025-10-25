@@ -1,327 +1,339 @@
-/* Profile Card Styling */
+
+
+/* Profile card styling */
+.home-section{
+  background: transparent;
+}
 .profile-card {
-  width: 280px;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.profile-card-img {
-  width: 100%;
-  height: auto;
+  max-width: 280px;
   transition: transform 0.3s ease;
 }
 
 .profile-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.profile-card:hover .profile-card-img {
-  transform: scale(1.03);
+.profile-card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-/* Text content adjustments */
-.text-content h1,
-.text-content h4 {
-  margin-bottom: 0.5rem;
+/* Text content styling */
+.text-content h1 {
+  font-size: 2.5rem;
 }
 
-.changing-text {
+.text-content h4.changing-text {
   font-size: 1.25rem;
-  font-weight: 600;
-  color: #007bff;
-  transition: opacity 0.3s ease-in-out;
+  font-weight: 500;
 }
 
-/* Responsive adjustments for social cards */
-@media (max-width: 576px) {
-  .social-card {
-    width: 100px;
-    padding: 0.75rem;
-  }
-  .social-card p {
-    font-size: 0.85rem;
-  }
+.text-content p {
+  font-size: 0.95rem;
 }
 
-/* Progress bars */
-.progress-bar {
-  transition: width 0.4s ease-in-out;
+/* Button styling */
+.btn-outline-primary,
+.btn-primary {
+  min-width: 120px;
+  font-weight: 500;
 }
 
-/* Responsive text adjustments */
-@media (max-width: 768px) {
-  .animate-text h4 {
-    font-size: 1.5rem;
-  }
-
-  .card-body .btn {
-    font-size: 0.85rem;
-    padding: 0.3rem 0.6rem;
-  }
-}
-
-/* Social Icon Hover Card Effect */
+/* Social icons */
 .social-icon {
-  text-decoration: none;
-  color: #333;
-  transition: all 0.3s ease;
-  border-radius: 10px;
-  padding: 0.75rem;
-  text-align: center;
-  min-width: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f8f9fa;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: #f8f9fa;
+  transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
-  background-color: #e9f5ff;
-  color: #007bff;
+  color: #0d6efd;
 }
 
-.social-icon:hover i,
-.social-icon:hover small {
-  color: #007bff;
-}
-
+.social-icon i,
 .social-icon img {
-  transition: transform 0.3s ease;
+  margin-bottom: 4px;
 }
 
-.social-icon:hover img {
-  transform: scale(1.1);
-}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .profile-card {
+    max-width: 200px;
+  }
 
+  .text-content h1 {
+    font-size: 2rem;
+  }
 
-/* Second section */
-
-
-/* About card animation */
-.animate-about {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .text-content h4.changing-text {
+    font-size: 1.1rem;
   }
 }
 
-/* Large profile image */
-.profile-img-lg {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
+/* About card styling */
+.about-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
 }
 
-/* Tech circle images */
+.about-card:hover {
+  transform: scale(1.02);
+}
+
+/* Profile image styling */
+.profile-img-lg {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 4px solid #0d6efd;
+}
+
+/* Tech stack icons */
 .tech-img-circle {
-  width: 120px;
-  height: 120px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .tech-img-circle:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
 }
 
-/* About card container styling */
-.about-card {
-  background: white;
-  border-radius: 16px;
-}
-/* Card hover effect */
-.card-hover-expand {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .profile-img-lg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .tech-img-circle {
+    width: 60px;
+    height: 60px;
+  }
 }
 
-.card-hover-expand:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
+/* Projects.css */
 
-/* Project Section */
+/* Project card styling */
 .small-project-card {
-  border-radius: 10px;
+  background-color: #1e293b; /* Dark slate */
+  border-radius: 8px;
   overflow: hidden;
-  background-color: #111; /* dark background */
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .small-project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
-  border: 2px solid #0d6efd; /* Bootstrap primary or highlight color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card-img-top-wrapper {
-  height: 150px;
-  overflow: hidden;
-}
-
+/* Project image */
 .card-img-top-small {
   width: 100%;
-  height: 100%;
+  height: 140px;
   object-fit: cover;
+  border-bottom: 2px solid #0d6efd;
+}
+
+/* Project title */
+.small-project-card h6 {
+  font-size: 1rem;
+}
+
+/* Button styling */
+.btn-sm {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .card-img-top-small {
+    height: 140px;
+  }
+
+  .small-project-card h6 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Experience.css */
+
+/* Card styling */
+.experience-card {
+  background-color: #1e293b;
+  border-left: 4px solid #0d6efd;
+  border-radius: 12px;
   transition: transform 0.3s ease;
 }
 
-.small-project-card:hover .card-img-top-small {
-  transform: scale(1.05);
+.experience-card:hover {
+  transform: translateY(-4px);
 }
 
-.small-project-card {
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
+/* Titles and subtitles */
+.experience-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
 }
 
-.small-project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+.experience-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #cbd5e1;
 }
 
-.card-img-top-wrapper {
-  height: 150px;
-  overflow: hidden;
+.experience-duration {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #94a3b8;
 }
 
-.card-img-top-small {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+/* Section subtitle */
+.section-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
-.small-project-card:hover .card-img-top-small {
-  transform: scale(1.05);
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .experience-title {
+    font-size: 1.1rem;
+  }
+
+  .experience-subtitle,
+  .experience-duration {
+    font-size: 0.85rem;
+  }
 }
 
-/* Skill Section */
+/* Skills.css */
+
+/* Skill card styling */
 .skill-card {
-  transition: all 0.3s ease-in-out;
-  background-color: #fff;
+  background-color: #ffffff;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  background-color: #f8f9fa;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.icon i {
-  transition: color 0.3s ease-in-out;
+/* Icon styling */
+.skill-card .icon i {
+  transition: transform 0.3s ease;
 }
 
 .skill-card:hover .icon i {
-  color: #0d6efd; /* Bootstrap primary color */
+  transform: scale(1.2);
 }
 
-
-/* Contact Image Hover Card */
-.contact-image-card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  border-radius: 20px;
-  overflow: hidden;
+/* Skill title */
+.skill-card h5 {
+  font-size: 1.1rem;
+  color: #0f172a;
 }
 
-.contact-image-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+/* Progress bar styling */
+.progress {
+  background-color: #e2e8f0;
 }
 
-/* Contact Image */
-.hover-zoom img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.progress-bar {
+  transition: width 0.6s ease;
 }
 
-.hover-zoom img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+/* Proficiency text */
+.skill-card small {
+  font-size: 0.85rem;
+  color: #6c757d;
 }
 
-/* Contact Section */
-#contact {
-  background-color: #f8f9fa;
-  padding: 50px 0;
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .skill-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .skill-card h5 {
+    font-size: 1rem;
+  }
+
+  .skill-card .icon i {
+    font-size: 1.5rem;
+  }
 }
 
-/* Form Styling */
-#contact form {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+/* Contact.css */
+
+/* Section background */
+
+/* Heading */
+.section h2 {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-/* Submit Button Hover */
-#contact button[type="submit"]:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-}
-
-/* Image Card Container */
+/* Contact image card */
 .contact-img-card {
-  position: relative;
+  max-width: 100%;
   overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
 }
 
-/* Outer Hover Effect */
 .contact-img-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* Inner Hover Overlay */
-.contact-img-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(135deg, rgba(193, 204, 215, 0.2), rgba(0, 123, 255, 0.4));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
+/* Form styling */
+form .form-label {
+  font-weight: 500;
+  color: #0f172a;
 }
 
-/* Activate inner hover on hover */
-.contact-img-card:hover::after {
-  opacity: 1;
+form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
 }
 
-/* Image Styling */
-.contact-img-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 0;
+form .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: none;
 }
 
-.contact-img-card:hover img {
-  transform: scale(1.02);
+/* Submit button */
+form .btn-primary {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .contact-img-card {
+    margin-bottom: 1rem;
+  }
+
+  form .btn-primary {
+    width: 100%;
+  }
 }
