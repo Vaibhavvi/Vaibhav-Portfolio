@@ -11,6 +11,7 @@ import Kids from '../assets/Kids.png';
 import CodePaste from '../assets/CodePaste.png';
 import Contactimage from '../assets/Contactimage.jpeg';
 import Product from '../assets/Product.png';
+import StayVista from '../assets/StayVista.png';
 
 function Home() {
   const [text, setText] = useState('Frontend Developer');
@@ -37,11 +38,10 @@ function Home() {
   };
 
   const projectData = [
+    { image:StayVista, title: "StayVista (Full-Stack)", github: "https://github.com/Vaibhavvi/StayVista---AirbnbClone", live: "https://stayvista-airbnbclone-1.onrender.com/" },
     { image: Product, title: "Product Store (Full-Stack)", github: "https://github.com/Vaibhavvi/Product-Store-MERN", live: "https://product-store-mern-frontend.onrender.com/" },
     { image: CodePaste, title: "CodePaste", github: "https://github.com/Vaibhavvi/PasteCode", live: "https://vaibhavvi.github.io/PasteCode/" },
     { image: iTask, title: "iTask", github: "https://github.com/Vaibhavvi/iTask", live: "https://vaibhavvi.github.io/iTask/" },
-    { image: Kids, title: "Kids App", github: "https://github.com/Vaibhavvi/KIDS-LERNER", live: "https://vaibhavvi.github.io/KIDS-LERNER/" },
-    { image: WordChange, title: "WordChange", github: "https://github.com/Vaibhavvi/WordChange", live: "https://vaibhavvi.github.io/WordChange/" }
   ];
 
   return (
@@ -56,7 +56,7 @@ function Home() {
           <div className="text-content text-center text-md-start">
             <h1 className="fw-bold mb-2">Hi, I'm <span className="text-primary">Vaibhav Dubey</span></h1>
             <h4 className="changing-text text-light mb-3">{text}</h4>
-            <p className="mb-3 small text-light">FGIET Raibareli (CSE-2nd year)</p>
+            <p className="mb-3 small text-light">FGIET Raibareli (BTech - CSE-2nd year)</p>
 
             <div className="d-flex gap-3 flex-wrap mb-3">
               <a href="https://www.linkedin.com/in/vaibhav-dubey-8199292b4/" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary">Hire Me</a>
