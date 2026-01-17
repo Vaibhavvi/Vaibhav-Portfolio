@@ -3,7 +3,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
-import Background from "./components/Background";
 
 function Layout({ children }) {
   return (
@@ -22,7 +21,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div style={{ position: "relative", minHeight: "100vh" }}>
-      <Background />
       <div style={{ position: "relative", zIndex: 1 }}>
         <RouterProvider router={router} />
       </div>
