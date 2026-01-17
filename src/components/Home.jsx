@@ -5,13 +5,11 @@ import Dube2 from '../assets/Dube2.png';
 import Frontend from '../assets/Frontend.jpeg';
 import React1 from '../assets/React1.jpeg';
 import Mern from '../assets/Mern.jpeg';
-import WordChange from '../assets/WordChange.png';
 import iTask from '../assets/iTask.png';
-import Kids from '../assets/Kids.png';
 import CodePaste from '../assets/CodePaste.png';
 import Contactimage from '../assets/Contactimage.jpeg';
 import Product from '../assets/Product.png';
-import StayVista from '../assets/StayVista.png';
+import StayVista from '../assets/Stayvista.png';
 
 function Home() {
   const [text, setText] = useState('Frontend Developer');
