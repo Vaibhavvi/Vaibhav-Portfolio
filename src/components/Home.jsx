@@ -38,80 +38,158 @@ function Home() {
   };
 
   const projectData = [
-    { image:StayVista, title: "StayVista (Full-Stack)", github: "https://github.com/Vaibhavvi/StayVista---AirbnbClone", live: "https://stayvista-airbnbclone-1.onrender.com/" },
+    { image: StayVista, title: "StayVista (Full-Stack)", github: "https://github.com/Vaibhavvi/StayVista---AirbnbClone", live: "https://stayvista-airbnbclone-1.onrender.com/" },
     { image: Product, title: "Product Store (Full-Stack)", github: "https://github.com/Vaibhavvi/Product-Store-MERN", live: "https://product-store-mern-frontend.onrender.com/" },
     { image: CodePaste, title: "CodePaste", github: "https://github.com/Vaibhavvi/PasteCode", live: "https://vaibhavvi.github.io/PasteCode/" },
     { image: iTask, title: "iTask", github: "https://github.com/Vaibhavvi/iTask", live: "https://vaibhavvi.github.io/iTask/" },
   ];
 
   return (
-    <div  className="home-container bg-dark text-light">
+    <div className="home-container bg-dark text-light">
       {/* Home Section */}
-      <section className="home-section py-5">
-        <div className="container d-flex flex-column flex-md-row align-items-center justify-content-center gap-5">
-          <div className="profile-card shadow">
-            <img src={Dube1} alt="Vaibhav Dubey" className="img-fluid profile-card-img" />
-          </div>
+      <section className="hero-section py-5">
+        <div className="container">
+          <div className="row align-items-center justify-content-center g-5">
 
-          <div className="text-content text-center text-md-start">
-            <h1 className="fw-bold mb-2">Hi, I'm <span className="text-primary">Vaibhav Dubey</span></h1>
-            <h4 className="changing-text text-light mb-3">{text}</h4>
-            <p className="mb-3 small text-light">FGIET Raibareli (BTech - CSE-2nd year)</p>
-
-            <div className="d-flex gap-3 flex-wrap mb-3">
-              <a href="https://www.linkedin.com/in/vaibhav-dubey-8199292b4/" target="_blank" rel="noopener noreferrer" className="btn btn-outline-primary">Hire Me</a>
-              <a href="/path-to-your-resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Resume</a>
+            {/* Profile Image */}
+            <div className="col-md-5 text-center">
+              <div className="hero-image-card">
+                <img
+                  src={Dube1}
+                  alt="Vaibhav Dubey"
+                  className="hero-image"
+                />
+              </div>
             </div>
 
-            <div className="d-flex gap-4 justify-content-center justify-content-md-start flex-wrap">
-              <a href="https://github.com/Vaibhavvi" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <i className="fab fa-github fa-2x mb-1"></i>
-                <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub" style={{ height: '28px', marginBottom: '5px' }} />
-                <small>GitHub</small>
-              </a>
-              <a href="https://leetcode.com/u/vaibhav_dubey_111/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <img src="https://leetcode.com/static/images/LeetCode_logo.png" alt="LeetCode" style={{ height: '28px', marginBottom: '5px' }} />
-                <small>LeetCode</small>
-              </a>
+            {/* Text Content */}
+            <div className="col-md-7 text-center text-md-start">
+              <h1 className="hero-title">
+                Hi, I'm <span>Vaibhav Dubey</span>
+              </h1>
+
+              <h4 className="hero-subtitle">{text}</h4>
+
+              <p className="hero-edu">
+                B.Tech CSE (2nd Year) • FGIET Raibareli
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="d-flex gap-3 justify-content-center justify-content-md-start flex-wrap mt-4">
+                <a
+                  href="https://www.linkedin.com/in/vaibhav-dubey-8199292b4/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline-info hero-btn"
+                >
+                  Hire Me
+                </a>
+
+                <a
+                  href="/path-to-your-resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-info hero-btn"
+                >
+                  Download Resume
+                </a>
+              </div>
+
+              {/* Social Links */}
+              <div className="hero-socials mt-4">
+                <a
+                  href="https://github.com/Vaibhavvi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+
+                <a
+                  href="https://leetcode.com/u/vaibhav_dubey_111/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://leetcode.com/static/images/LeetCode_logo.png"
+                    alt="LeetCode"
+                  />
+                  <span>LeetCode</span>
+                </a>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="section py-5">
+
+      {/* About Me Section */}
+      <section id="about" className="about-section py-5">
         <div className="container d-flex justify-content-center">
-          <div className="about-card p-4 shadow-lg rounded text-center w-100" style={{ maxWidth: '900px' }}>
-            <h3 className="text-center fw-bold mb-4 text-dark">About Me</h3>
-            <div className="d-flex justify-content-center mb-4">
-              <img src={Dube2} alt="Vaibhav Dubey" className="rounded-circle profile-img-lg shadow" />
+          <div className="about-glass-card text-center">
+            <h2 className="fw-bold mb-4 text-white">About Me</h2>
+
+            <div className="avatar-wrapper mb-4">
+              <img
+                src={Dube2}
+                alt="Vaibhav Dubey"
+                className="profile-avatar"
+              />
             </div>
-            <p className="px-3 text-dark">Certified MERN stack developer with expertise in React, Node.js, and MongoDB, now focusing on AI-integrated projects and DSA in C++. Passionate about building responsive, scalable, and high-performance web applications.</p>
-            {/* Core tech stack */}
-            <div className="d-flex justify-content-center gap-4 flex-wrap mt-3">
-              <img src={Frontend} alt="Frontend" className="tech-img-circle shadow" />
-              <img src={React1} alt="React" className="tech-img-circle shadow" />
-              <img src={Mern} alt="MERN" className="tech-img-circle shadow" />
+
+            <p className="about-text">
+              MERN Stack Developer with strong expertise in React, Node.js, and MongoDB.
+              Currently focused on building <strong>AI-integrated full-stack projects</strong>
+              and strengthening <strong>DSA using C++</strong>. Passionate about creating
+              scalable, performant, and user-centric web applications.
+            </p>
+
+            <div className="tech-stack mt-4">
+              <img src={Frontend} alt="Frontend" />
+              <img src={React1} alt="React" />
+              <img src={Mern} alt="MERN" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="small-projects" className="py-5">
+      <section id="projects" className="projects-section py-5">
         <div className="container">
-          <h3 className="text-center fw-bold mb-4 text-light">Projects</h3>
-          <div className="row justify-content-center g-4">
-            {projectData.map((project, i) => (
-              <div className="col-sm-6 col-md-4 col-lg-3" key={i}>
-                <div className="small-project-card shadow-sm text-white">
-                  <img src={project.image} alt={project.title} className="card-img-top-small" />
-                  <div className="p-3 text-center">
-                    <h6 className="fw-semibold mb-2 text-white">{project.title}</h6>
-                    <div className="d-flex justify-content-center gap-2">
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-outline-light">Live</a>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-sm btn-light text-dark">GitHub</a>
+          <h2 className="text-center fw-bold mb-5 text-white">
+            Projects
+          </h2>
+
+          <div className="row g-4 justify-content-center">
+            {projectData.map((project, index) => (
+              <div className="col-sm-6 col-md-4 col-lg-3" key={index}>
+                <div className="project-glass-card">
+                  <div className="project-image">
+                    <img src={project.image} alt={project.title} />
+                    <div className="project-overlay">
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline-light btn-sm"
+                      >
+                        Live
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-light btn-sm text-dark"
+                      >
+                        GitHub
+                      </a>
                     </div>
+                  </div>
+
+                  <div className="project-content text-center">
+                    <h6>{project.title}</h6>
                   </div>
                 </div>
               </div>
@@ -120,65 +198,82 @@ function Home() {
         </div>
       </section>
 
+
       {/* Experience/Education Section */}
-      <section id="experience" className="section py-5 experience-section">
+      <section id="experience" className="experience-section py-5">
         <div className="container">
-          <h3 className="text-center fw-bold mb-4 text-light">Experience & Education</h3>
+          <h2 className="text-center fw-bold mb-5 text-white">
+            Experience & Education
+          </h2>
+
           <div className="row g-4">
-            {/* Experience Column */}
-            <div className="col-md-6">
-              <h4 className="section-subtitle text-primary mb-4">Experience</h4>
+            {/* Experience */}
+            <div className="col-lg-6">
+              <h4 className="section-heading mb-4">Experience</h4>
 
               {[
                 {
                   title: "Founder Office Intern",
                   subtitle: "Hukkido",
                   duration: "Summer 2025",
-                  description: "Assisted in startup operations and learning management processes.",
+                  description:
+                    "Worked closely with founders, supported startup operations, and learned real-world management workflows.",
                 },
                 {
-                  title: "Summer Training",
+                  title: "Summer Training (MERN)",
                   subtitle: "DigiCoders",
-                  duration: "July 2024 – Aug 2024",
-                  description: "Completed training with Star Performer award in MERN stack development.",
+                  duration: "Jul 2024 – Aug 2024",
+                  description:
+                    "Completed intensive MERN stack training and awarded Star Performer for project excellence.",
                 },
               ].map((exp, i) => (
-                <div className="experience-card p-3 mb-3" key={i}>
-                  <h5 className="experience-title">{exp.title}</h5>
-                  <p className="experience-subtitle">{exp.subtitle}</p>
-                  <p className="experience-duration">{exp.duration}</p>
-                  <p>{exp.description}</p>
+                <div className="timeline-card" key={i}>
+                  <span className="timeline-dot"></span>
+                  <div className="card-content">
+                    <h5>{exp.title}</h5>
+                    <span className="text-muted small">
+                      {exp.subtitle} • {exp.duration}
+                    </span>
+                    <p className="mt-2">{exp.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
 
-            {/* Education Column */}
-            <div className="col-md-6">
-              <h4 className="section-subtitle text-primary mb-4">Education</h4>
+            {/* Education */}
+            <div className="col-lg-6">
+              <h4 className="section-heading mb-4">Education</h4>
 
               {[
                 {
                   title: "B.Tech CSE (Lateral Entry)",
                   subtitle: "FGIET Raibareli",
                   duration: "2025 – 2028",
-                  description: "Currently pursuing, focusing on MERN stack, GenAI full-stack integration projects.",
+                  description:
+                    "Pursuing with focus on MERN stack and GenAI-based full-stack projects.",
                 },
                 {
-                  title: "Diploma in CSE",
+                  title: "Diploma in Computer Science",
                   subtitle: "2022 – 2025",
-                  description: "Scored 71%, Star Performer of the batch, trained in full-stack web development.",
+                  description:
+                    "Scored 71%, awarded Star Performer, trained in full-stack web development.",
                 },
                 {
-                  title: "10th School",
+                  title: "High School (10th)",
                   subtitle: "School Topper",
-                  description: "Achieved top rank in class with excellent academic performance.",
+                  description:
+                    "Achieved top academic rank with consistent excellence.",
                 },
               ].map((edu, i) => (
-                <div className="experience-card p-3 mb-3" key={i}>
-                  <h5 className="experience-title">{edu.title}</h5>
-                  {edu.subtitle && <p className="experience-subtitle">{edu.subtitle}</p>}
-                  {edu.duration && <p className="experience-duration">{edu.duration}</p>}
-                  <div>{edu.description}</div>
+                <div className="timeline-card" key={i}>
+                  <span className="timeline-dot"></span>
+                  <div className="card-content">
+                    <h5>{edu.title}</h5>
+                    <span className="text-muted small">
+                      {edu.subtitle} {edu.duration && `• ${edu.duration}`}
+                    </span>
+                    <p className="mt-2">{edu.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -186,31 +281,45 @@ function Home() {
         </div>
       </section>
 
+
       {/* Skills Section */}
-      <section id="skills" className="section-skill py-5">
+      <section id="skills" className="skills-section py-5">
         <div className="container">
-          <h3 className="text-center fw-bold mb-4 text-light">My Skills</h3>
+          <h2 className="text-center fw-bold mb-5 text-white">
+            My Skills
+          </h2>
+
           <div className="row g-4">
             {[
-              ['HTML5', 90, 'fab fa-html5'],
-              ['CSS3', 85, 'fab fa-css3-alt'],
-              ['Bootstrap', 80, 'fab fa-bootstrap'],
-              ['JavaScript', 75, 'fab fa-js'],
-              ['React', 80, 'fab fa-react'],
-              ['C++', 85, 'fas fa-code'],
-              ['Python', 70, 'fab fa-python'],
-              ['MongoDB', 70, 'fas fa-database'],
-              ['Express.js', 65, 'fas fa-server'],
-              ['Node.js', 60, 'fab fa-node'],
-            ].map(([label, percent, icon], index) => (
+              { name: "HTML5", level: 90, icon: "fab fa-html5" },
+              { name: "CSS3", level: 85, icon: "fab fa-css3-alt" },
+              { name: "Bootstrap", level: 80, icon: "fab fa-bootstrap" },
+              { name: "JavaScript", level: 75, icon: "fab fa-js" },
+              { name: "React", level: 80, icon: "fab fa-react" },
+              { name: "C++", level: 85, icon: "fas fa-code" },
+              { name: "Python", level: 70, icon: "fab fa-python" },
+              { name: "MongoDB", level: 70, icon: "fas fa-database" },
+              { name: "Express.js", level: 65, icon: "fas fa-server" },
+              { name: "Node.js", level: 60, icon: "fab fa-node" },
+            ].map((skill, index) => (
               <div className="col-md-6 col-lg-4" key={index}>
-                <div className="skill-card p-4 border rounded shadow-sm text-center h-100">
-                  <div className="icon mb-3"><i className={`${icon} fa-2x text-primary`}></i></div>
-                  <h5 className="mb-2 fw-semibold text-dark">{label}</h5>
-                  <div className="progress rounded-pill" style={{ height: '10px' }}>
-                    <div className="progress-bar bg-primary" style={{ width: `${percent}%` }}></div>
+                <div className="skill-glass-card h-100">
+                  <div className="skill-icon">
+                    <i className={`${skill.icon}`}></i>
                   </div>
-                  <small className="text-muted mt-2 d-block">{percent}% Proficiency</small>
+
+                  <h5 className="skill-title">{skill.name}</h5>
+
+                  <div className="progress skill-progress">
+                    <div
+                      className="progress-bar"
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+
+                  <span className="skill-percent">
+                    {skill.level}% Proficiency
+                  </span>
                 </div>
               </div>
             ))}
@@ -218,36 +327,80 @@ function Home() {
         </div>
       </section>
 
+
+
       {/* Contact Section */}
-      <section id="contact" className="section py-5">
+      <section id="contact" className="contact-section py-5">
         <div className="container">
-          <h2 className="text-center mb-4 text-light">Get in Touch</h2>
-          <div className="row">
-            <div className="col-md-6 d-flex align-items-center justify-content-center mb-4">
-              <div className="contact-img-card hover-zoom">
-                <img src={Contactimage} alt="Contact" className="img-fluid rounded shadow-sm" />
+          <h2 className="text-center fw-bold mb-5 text-white">
+            Get In Touch
+          </h2>
+
+          <div className="row align-items-center g-4">
+            {/* Image */}
+            <div className="col-lg-6 text-center">
+              <div className="contact-image-wrapper">
+                <img
+                  src={Contactimage}
+                  alt="Contact"
+                  className="img-fluid"
+                />
               </div>
             </div>
-            <div className="col-md-6">
-              <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label text-light">Name</label>
-                  <input type="text" id="name" className="form-control" name="name" value={formData.name} onChange={handleChange} required />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label text-light">Email</label>
-                  <input type="email" id="email" className="form-control" name="email" value={formData.email} onChange={handleChange} required />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="message" className="form-label text-light">Message</label>
-                  <textarea id="message" className="form-control" name="message" rows="4" value={formData.message} onChange={handleChange} required></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">Send Message</button>
-              </form>
+
+            {/* Form */}
+            <div className="col-lg-6">
+              <div className="contact-form-card">
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-3">
+                    <label className="form-label">Name</label>
+                    <input
+                      type="text"
+                      className="form-control custom-input"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Your full name"
+                      required
+                    />
+                  </div>
+
+                  <div className="mb-3">
+                    <label className="form-label">Email</label>
+                    <input
+                      type="email"
+                      className="form-control custom-input"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="your@email.com"
+                      required
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label className="form-label">Message</label>
+                    <textarea
+                      rows="4"
+                      className="form-control custom-input"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Write your message here..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" className="btn btn-gradient w-100">
+                    Send Message 🚀
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
     </div>
   );
 };

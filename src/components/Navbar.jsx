@@ -32,7 +32,7 @@ function AnimatedNavbar() {
               <span className="nav-link animated-link" onClick={() => handleScroll('about')}>About</span>
             </li>
             <li className="nav-item">
-              <span className="nav-link animated-link" onClick={() => handleScroll('small-projects')}>Projects</span>
+              <span className="nav-link animated-link" onClick={() => handleScroll('projects')}>Projects</span>
             </li>
             <li className="nav-item">
               <span className="nav-link animated-link" onClick={() => handleScroll('skills')}>Skills</span>

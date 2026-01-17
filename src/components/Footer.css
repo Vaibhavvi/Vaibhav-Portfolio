@@ -1,0 +1,141 @@
+/* =========================
+   FOOTER SECTION
+   ========================= */
+
+.footer-section {
+  background: linear-gradient(180deg, #020617, #020617cc);
+  padding: 50px 0 25px;
+  color: #e5e7eb;
+  border-top: 1px solid rgba(56, 189, 248, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* =========================
+   FOOTER TITLES
+   ========================= */
+
+.footer-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  color: #38bdf8;
+  position: relative;
+}
+
+.footer-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #0dcaf0, #38bdf8);
+  margin-top: 6px;
+}
+
+/* =========================
+   FOOTER TEXT / CONTACT
+   ========================= */
+
+.footer-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-text i {
+  color: #99a7ad;
+  font-size: 1rem;
+}
+
+/* =========================
+   BRAND (CENTER)
+   ========================= */
+
+.footer-brand {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+}
+
+.footer-brand span {
+  color: #38bdf8;
+}
+
+.footer-role {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+/* =========================
+   SOCIAL ICONS (FOLLOW ME)
+   ========================= */
+
+.footer-socials {
+  display: flex;
+  gap: 18px;
+  justify-content: flex-end;
+}
+
+.footer-socials a {
+  width: 46px;
+  height: 46px;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-socials a:hover {
+  
+  color: #020617;
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.5);
+}
+
+/* =========================
+   DIVIDER
+   ========================= */
+
+.footer-divider {
+  margin: 25px 0 15px;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   FOOTER BOTTOM
+   ========================= */
+
+.footer-bottom {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE FIXES
+   ========================= */
+
+@media (max-width: 768px) {
+  .footer-socials {
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .footer-title,
+  .footer-text,
+  .footer-brand,
+  .footer-role {
+    text-align: center;
+    justify-content: center;
+  }
+}
