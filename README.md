@@ -25,7 +25,7 @@ This is a responsive and modern **Portfolio Website** built with **React.js** an
 ## 📸 Demo
 
 Live Preview: [Click )  
-*(https://vaibhav-portfolio-liard.vercel.app/)*
+*([https://vaibhav-portfolio-liard.vercel.app/](https://vaibhav-portfolio-68emrun1r-vaibhavvis-projects.vercel.app/))*
 
 ---
 
