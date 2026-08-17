@@ -19,13 +19,15 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return (
+  return(
+  (
     <div style={{ position: "relative", minHeight: "100vh" }}>
       <div style={{ position: "relative", zIndex: 1 }}>
         <RouterProvider router={router} />
       </div>
     </div>
-  );
+  )
+);
 }
 
 export default App;

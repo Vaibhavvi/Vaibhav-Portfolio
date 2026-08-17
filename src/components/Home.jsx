@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './Home.css';
+import '../styles/Home.css';
 import Dube1 from '../assets/Dube1.jpg';
 import Dube2 from '../assets/Dube2.png';
 import Frontend from '../assets/Frontend.jpeg';
@@ -13,7 +13,7 @@ import StayVista from '../assets/Stayvista.png';
 
 function Home() {
   const [text, setText] = useState('Frontend Developer');
-  const texts = ['Frontend Developer', 'Full Stack Developer', 'React Developer', 'Learner'];
+  const texts = ['Full Stack Developer', 'MERN Stack Developer', 'React Developer', 'Problem Solver'];
   const indexRef = useRef(0);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
@@ -36,10 +36,68 @@ function Home() {
   };
 
   const projectData = [
-    { image: StayVista, title: "StayVista (Full-Stack)", github: "https://github.com/Vaibhavvi/StayVista---AirbnbClone", live: "https://stayvista-airbnbclone-1.onrender.com/" },
-    { image: Product, title: "Product Store (Full-Stack)", github: "https://github.com/Vaibhavvi/Product-Store-MERN", live: "https://product-store-mern-frontend.onrender.com/" },
-    { image: CodePaste, title: "CodePaste", github: "https://github.com/Vaibhavvi/PasteCode", live: "https://vaibhavvi.github.io/PasteCode/" },
-    { image: iTask, title: "iTask", github: "https://github.com/Vaibhavvi/iTask", live: "https://vaibhavvi.github.io/iTask/" },
+    {
+      image: StayVista,
+      title: "StayVista",
+      description:
+        "A full-stack Airbnb-inspired platform where users can explore and manage property listings.",
+      skills: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Cloudinary"
+      ],
+      github: "https://github.com/Vaibhavvi/StayVista---AirbnbClone",
+      live: "https://stayvista-airbnbclone-1.onrender.com/"
+    },
+
+    {
+      image: Product,
+      title: "Product Store",
+      description:
+        "A MERN stack e-commerce application for managing and exploring products with a responsive interface.",
+      skills: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "REST API"
+      ],
+      github: "https://github.com/Vaibhavvi/Product-Store-MERN",
+      live: "https://product-store-mern-frontend.onrender.com/"
+    },
+
+    {
+      image: CodePaste,
+      title: "CodePaste",
+      description:
+        "A web application for creating, storing and sharing code snippets through a simple interface.",
+      skills: [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Local Storage"
+      ],
+      github: "https://github.com/Vaibhavvi/PasteCode",
+      live: "https://vaibhavvi.github.io/PasteCode/"
+    },
+
+    {
+      image: iTask,
+      title: "iTask",
+      description:
+        "A clean and responsive task management application for creating and organizing daily tasks.",
+      skills: [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      github: "https://github.com/Vaibhavvi/iTask",
+      live: "https://vaibhavvi.github.io/iTask/"
+    }
   ];
 
   return (
@@ -138,12 +196,13 @@ function Home() {
             </div>
 
             <p className="about-text">
-              MERN Stack Developer with strong expertise in React, Node.js, and MongoDB.
-              Currently focused on building <strong>AI-integrated full-stack projects</strong>
-              and strengthening <strong>DSA using C++</strong>. Passionate about creating
-              scalable, performant, and user-centric web applications.
+              MERN Stack Developer with strong expertise in React, Node.js, and MongoDB,
+              along with a solid foundation in Java. Currently focused on building{" "}
+              <strong>AI-integrated full-stack projects</strong> and strengthening{" "}
+              <strong>DSA using Java</strong>. Passionate about creating scalable,
+              performant, and user-centric web applications while continuously improving
+              problem-solving and software development skills.
             </p>
-
             <div className="tech-stack mt-4">
               <img src={Frontend} alt="Frontend" />
               <img src={React1} alt="React" />
@@ -153,49 +212,133 @@ function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* PROJECTS SECTION */}
       <section id="projects" className="projects-section py-5">
+
         <div className="container">
-          <h2 className="text-center fw-bold mb-5 text-white">
-            Projects
-          </h2>
+
+          <div className="projects-header text-center mb-5">
+
+            <span className="section-badge">
+              MY WORK
+            </span>
+
+            <h2 className="projects-title">
+              Featured <span>Projects</span>
+            </h2>
+
+            <p className="projects-subtitle">
+              A collection of full-stack projects built with modern
+              technologies and focused on solving real-world problems.
+            </p>
+
+          </div>
 
           <div className="row g-4 justify-content-center">
+
             {projectData.map((project, index) => (
-              <div className="col-sm-6 col-md-4 col-lg-3" key={index}>
-                <div className="project-glass-card">
+
+              <div
+                className="col-sm-6 col-lg-4"
+                key={index}
+              >
+                <article className="project-glass-card">
+
                   <div className="project-image">
-                    <img src={project.image} alt={project.title} />
+
+                    <img
+                      src={project.image}
+                      alt={`${project.title} project`}
+                      loading="lazy"
+                    />
+
                     <div className="project-overlay">
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-outline-light btn-sm"
-                      >
-                        Live
-                      </a>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-light btn-sm text-dark"
-                      >
-                        GitHub
-                      </a>
+
+                      {/* Live Demo */}
+
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-btn live-btn"
+                          aria-label={`View ${project.title} live demo`}
+                        >
+                          <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                          <span>Live Demo</span>
+                        </a>
+                      )}
+
+
+                      {/* GitHub */}
+
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-btn github-btn"
+                          aria-label={`View ${project.title} source code`}
+                        >
+                          <i className="fa-brands fa-github"></i>
+                          <span>GitHub</span>
+                        </a>
+                      )}
+
                     </div>
+
                   </div>
 
-                  <div className="project-content text-center">
-                    <h6>{project.title}</h6>
+                  <div className="project-content">
+
+
+                    {/* Project Title */}
+
+                    <h5 className="project-title">
+                      {project.title}
+                    </h5>
+
+
+                    {/* Project Description */}
+
+                    {project.description && (
+                      <p className="project-description">
+                        {project.description}
+                      </p>
+                    )}
+
+                    {project.skills?.length > 0 && (
+
+                      <div className="project-skills">
+
+                        {project.skills.map((skill, skillIndex) => (
+
+                          <span
+                            className="project-skill"
+                            key={`${skill}-${skillIndex}`}
+                          >
+                            {skill}
+                          </span>
+
+                        ))}
+
+                      </div>
+
+                    )}
+
                   </div>
-                </div>
+
+                </article>
+
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
 
       {/* Experience/Education Section */}
       <section id="experience" className="experience-section py-5">
@@ -292,13 +435,14 @@ function Home() {
               { name: "HTML5", level: 90, icon: "fab fa-html5" },
               { name: "CSS3", level: 85, icon: "fab fa-css3-alt" },
               { name: "Bootstrap", level: 80, icon: "fab fa-bootstrap" },
-              { name: "JavaScript", level: 75, icon: "fab fa-js" },
+              { name: "JavaScript", level: 85, icon: "fab fa-js" },
+              { name: "MongoDB", level: 75, icon: "fas fa-database" },
+              { name: "Express.js", level: 75, icon: "fas fa-server" },
               { name: "React", level: 80, icon: "fab fa-react" },
-              { name: "C++", level: 85, icon: "fas fa-code" },
+              { name: "Node.js", level: 80, icon: "fab fa-node" },
+              { name: "Java", level: 85, icon: "fa-brands fa-java" },
+              { name: "C++", level: 40, icon: "fas fa-code" },
               { name: "Python", level: 70, icon: "fab fa-python" },
-              { name: "MongoDB", level: 70, icon: "fas fa-database" },
-              { name: "Express.js", level: 65, icon: "fas fa-server" },
-              { name: "Node.js", level: 60, icon: "fab fa-node" },
             ].map((skill, index) => (
               <div className="col-md-6 col-lg-4" key={index}>
                 <div className="skill-glass-card h-100">

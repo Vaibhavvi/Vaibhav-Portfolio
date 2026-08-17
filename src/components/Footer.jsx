@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "../styles/Footer.css";
 
 function Footer() {
   return (
@@ -23,7 +23,7 @@ function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="col-md-4 text-md-end text-center bg-light p-3 rounded">
+          <div className="col-md-4 text-md-end text-center p-3 rounded">
             <h5 className="footer-title">Follow Me</h5>
             <div className="footer-socials">
               <a
@@ -31,21 +31,21 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-github"></i>
+                <i className="fa-brands fa-github"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/vaibhav-dubey-8199292b4/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-linkedin"></i>
+                <i className="fa-brands fa-linkedin"></i>
               </a>
               <a
                 href="https://www.instagram.com/vaibhav_dubey_111/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-instagram"></i>
+                <i className="fa-brands fa-instagram"></i>
               </a>
             </div>
           </div>
